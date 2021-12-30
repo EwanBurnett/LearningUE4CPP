@@ -113,6 +113,7 @@ void ALearningUE4CPPCharacter::LookUpAtRate(float Rate)
 void ALearningUE4CPPCharacter::MoveForward(float Value)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Player Moved!"));
+	
 	if ((Controller != nullptr) && (Value != 0.0f))
 	{
 		// find out which way is forward
