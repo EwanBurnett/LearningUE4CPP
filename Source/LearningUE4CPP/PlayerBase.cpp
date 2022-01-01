@@ -3,6 +3,8 @@
 
 #include "PlayerBase.h"
 
+#include <string>
+
 // Sets default values
 APlayerBase::APlayerBase()
 {
@@ -15,7 +17,9 @@ APlayerBase::APlayerBase()
 void APlayerBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	UUserProfile* profile = NewObject<UUserProfile>(GetTransientPackage(), UUserProfile::StaticClass());
+	profile->Substats.Strength = 50;
 }
 
 FString APlayerBase::PrintInfo()
